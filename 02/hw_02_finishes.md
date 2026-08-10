@@ -52,3 +52,6 @@ core_fraction=5 - в теории так же позволял бы уменьш
 <img width="2472" height="271" alt="изображение" src="https://github.com/user-attachments/assets/6ef07dff-89a4-405d-85c1-ed8ac66b9cb9" />
 
 
+# Задание 4
+<img width="700" height="339" alt="изображение" src="https://github.com/user-attachments/assets/42b9675f-2126-401c-b1f5-8130816d58d5" />
+
