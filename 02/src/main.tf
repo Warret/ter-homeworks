@@ -79,13 +79,11 @@ resource "yandex_compute_instance" "platform_db" {
 
 }
 
-# 1. Создаем NAT шлюз
 resource "yandex_vpc_gateway" "nat_gw" {
   name = "nat-gateway"
   shared_egress_gateway {}
 }
 
-# 2. Создаем таблицу маршрутизации, которая направляет весь трафик (0.0.0.0/0) в NAT шлюз
 resource "yandex_vpc_route_table" "nat_rt" {
   network_id = yandex_vpc_network.develop.id
   name       = "nat-route-table"
