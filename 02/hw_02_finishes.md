@@ -55,3 +55,46 @@ core_fraction=5 - в теории так же позволял бы уменьш
 # Задание 4
 <img width="700" height="339" alt="изображение" src="https://github.com/user-attachments/assets/42b9675f-2126-401c-b1f5-8130816d58d5" />
 
+
+# Задание 7*
+local.test_list[1]
+length(local.test_list)
+local.test_map["admin"]
+"${local.test_map["admin"]} is admin for ${local.test_list[2]} server based on OS ${local.servers[local.test_list[2]]["image"]} with ${local.serve>
+
+# Задание 8 
+```variables.tf
+  variable "test" {
+  description = "Список серверов с командами подключения и IP-адресами"
+  type        = list(map(list(string)))
+
+  default = [
+    {
+      "dev1" = [
+        "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117",
+        "10.0.1.7",
+      ]
+    },
+    {
+      "dev2" = [
+        "ssh -o 'StrictHostKeyChecking=no' ubuntu@84.252.140.88",
+        "10.0.2.29",
+      ]
+    },
+    {
+      "prod1" = [
+        "ssh -o 'StrictHostKeyChecking=no' ubuntu@51.250.2.101",
+        "10.0.1.30",
+      ]
+    },
+  ]
+}
+```
+var.test[0]["dev1"][0]
+
+# Задание 9 
+<img width="771" height="326" alt="изображение" src="https://github.com/user-attachments/assets/1b1850d5-6ad8-46a7-af99-41fa8ef22c8d" />
+
+<img width="742" height="316" alt="изображение" src="https://github.com/user-attachments/assets/f3a10885-0c65-46a4-a71e-db20aebac627" />
+
+
