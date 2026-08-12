@@ -2,12 +2,15 @@ terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
+      version = "4.5.0"
     }
   }
-  required_version = "~>1.12.0" /*Многострочный комментарий.
+  required_version = "~>1.15.0" /*Многострочный комментарий.
  Требуемая версия terraform */
 }
-provider "docker" {}
+provider "docker" {
+  host = "unix:///var/run/docker.sock"
+}
 
 #однострочный комментарий
 
@@ -19,19 +22,19 @@ resource "random_password" "random_string" {
   min_numeric = 1
 }
 
-/*
-resource "docker_image" {
+
+resource "docker_image" "img_nginx" {
   name         = "nginx:latest"
   keep_locally = true
 }
 
-resource "docker_container" "1nginx" {
-  image = docker_image.nginx.image_id
-  name  = "example_${random_password.random_string_FAKE.resulT}"
+resource "docker_container" "nginx" {
+  image = docker_image.img_nginx.image_id
+  name  = "hello_world"
 
   ports {
     internal = 80
     external = 9090
   }
 }
-*/
+
