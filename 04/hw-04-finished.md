@@ -178,6 +178,7 @@
     ]),
   ]
 }
+```
 ```module.analytics_vm
 {
   "all" = [
