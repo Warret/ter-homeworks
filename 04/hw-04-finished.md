@@ -351,3 +351,7 @@
   ]
 }
 ```
+
+# Задание 2 
+<img width="398" height="201" alt="изображение" src="https://github.com/user-attachments/assets/0b651cf3-ace1-4779-9a33-f62a59782709" />
+
