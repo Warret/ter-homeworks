@@ -1,10 +1,88 @@
-resource "yandex_vpc_network" "develop" {
-  name = var.vpc_name
-}
-resource "yandex_vpc_subnet" "develop" {
-  name           = var.vpc_name
-  zone           = var.default_zone
-  network_id     = yandex_vpc_network.develop.id
-  v4_cidr_blocks = var.default_cidr
+module "vpc_dev" {
+  source   = "./vpc"              
+  env_name = "develop"
+  zone     = "ru-central1-a"
+  cidr     = "10.0.1.0/24"
 }
 
+resource "yandex_vpc_security_group" "ssh_access" {
+  name       = "ssh-access-sg"
+  network_id = module.vpc_dev.network_id
+
+  ingress {
+    protocol       = "TCP"
+    port           = 22
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    protocol       = "TCP"
+    port           = 80
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    protocol       = "ANY"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+locals {
+  ssh_public_key = file(var.vms_ssh_root_key)
+
+  cloud_init_marketing = templatefile("${path.module}/cloud-init.yml.tftpl", {
+    ssh_public_key = local.ssh_public_key
+  })
+
+  cloud_init_analytics = templatefile("${path.module}/cloud-init.yml.tftpl", {
+    ssh_public_key = local.ssh_public_key
+  })
+}
+
+module "marketing_vm" {
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  env_name       = "marketing"
+  network_id     = module.vpc_dev.network_id
+  subnet_zones   = [module.vpc_dev.subnet_zone]
+  subnet_ids     = [module.vpc_dev.subnet_id]
+  instance_name  = "marketing-instance"
+  instance_count = 1
+  image_family   = var.image_family
+  public_ip      = true
+  preemptible    = true 
+  security_group_ids = [yandex_vpc_security_group.ssh_access.id]
+
+  labels = {
+    owner   = "student"
+    project = "marketing"
+  }
+
+  metadata = {
+    serial-port-enable = 1
+    user-data          = local.cloud_init_marketing
+  }
+}
+
+module "analytics_vm" {
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  env_name       = "analytics"
+  network_id     = module.vpc_dev.network_id
+  subnet_zones   = [module.vpc_dev.subnet_zone]
+  subnet_ids     = [module.vpc_dev.subnet_id]
+  instance_name  = "analytics-instance"
+  instance_count = 1
+  image_family   = var.image_family
+  public_ip      = true
+  preemptible    = true
+  security_group_ids = [yandex_vpc_security_group.ssh_access.id]
+
+  labels = {
+    owner   = "student"
+    project = "analytics"
+  }
+
+  metadata = {
+    serial-port-enable = 1
+    user-data          = local.cloud_init_analytics
+  }
+}
