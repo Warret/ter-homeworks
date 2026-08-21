@@ -14,3 +14,9 @@ tflint не выдал ошибок. Checkov выдал ошибки схожи�
 <img width="1335" height="1212" alt="изображение" src="https://github.com/user-attachments/assets/0c1213c1-d7b5-42fc-8729-ecd10b659094" />
 
 <img width="725" height="65" alt="изображение" src="https://github.com/user-attachments/assets/3f27781b-54ed-40fb-aa39-5a15abfe749b" />
+
+# Задание 2
+<img width="1048" height="296" alt="изображение" src="https://github.com/user-attachments/assets/76ffbfff-4ec1-4035-ad46-9ef683fe7a04" />
+
+<img width="868" height="151" alt="изображение" src="https://github.com/user-attachments/assets/fd1bac1a-bf59-4164-83c9-6f099f9bdc47" />
+
