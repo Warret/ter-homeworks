@@ -18,5 +18,9 @@ tflint не выдал ошибок. Checkov выдал ошибки схожи�
 # Задание 2
 <img width="1048" height="296" alt="изображение" src="https://github.com/user-attachments/assets/76ffbfff-4ec1-4035-ad46-9ef683fe7a04" />
 
-<img width="868" height="151" alt="изображение" src="https://github.com/user-attachments/assets/fd1bac1a-bf59-4164-83c9-6f099f9bdc47" />
+<img width="1179" height="112" alt="изображение" src="https://github.com/user-attachments/assets/ab545b28-344a-48a9-98d1-df68f92185ae" />
 
+Ключи передал в переменные окружения
+<img width="1022" height="729" alt="изображение" src="https://github.com/user-attachments/assets/9bf3d6d0-8587-4e17-8e90-ec1711693088" />
+
+<img width="1499" height="432" alt="изображение" src="https://github.com/user-attachments/assets/e9264d46-513e-4284-bdeb-f59b2d217b94" />
