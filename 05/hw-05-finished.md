@@ -24,3 +24,12 @@ tflint не выдал ошибок. Checkov выдал ошибки схожи�
 <img width="1022" height="729" alt="изображение" src="https://github.com/user-attachments/assets/9bf3d6d0-8587-4e17-8e90-ec1711693088" />
 
 <img width="1499" height="432" alt="изображение" src="https://github.com/user-attachments/assets/e9264d46-513e-4284-bdeb-f59b2d217b94" />
+
+# Задание 3 
+Добавил конкретные версии. Для удалённых модулей добавил хэш коммита. Удалил неиспользуемые переменные.
+
+<img width="726" height="78" alt="изображение" src="https://github.com/user-attachments/assets/6516bc1b-8ce8-4b91-bab9-58f81725a13b" />
+
+<img width="1631" height="238" alt="изображение" src="https://github.com/user-attachments/assets/b35de946-69bb-472f-bb68-2d31335edc49" />
+
+<img width="1466" height="598" alt="изображение" src="https://github.com/user-attachments/assets/016e6875-3fed-4933-b612-ac738d5c07da" />
