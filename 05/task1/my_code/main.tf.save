@@ -64,7 +64,7 @@ module "marketing_vm" {
 }
 
 module "analytics_vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=4d05fab828b1fcae16556a4d167134efca2fccf2"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=1.0.0"
   env_name       = "analytics"
   network_id     = module.vpc_dev.network_id
   subnet_zones   = [module.vpc_dev.subnet_zone]
