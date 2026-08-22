@@ -33,3 +33,18 @@ tflint не выдал ошибок. Checkov выдал ошибки схожи�
 <img width="1631" height="238" alt="изображение" src="https://github.com/user-attachments/assets/b35de946-69bb-472f-bb68-2d31335edc49" />
 
 <img width="1466" height="598" alt="изображение" src="https://github.com/user-attachments/assets/016e6875-3fed-4933-b612-ac738d5c07da" />
+
+## Pull requests 
+https://github.com/Warret/ter-homeworks/pull/1
+
+# Задание 4
+<img width="793" height="85" alt="изображение" src="https://github.com/user-attachments/assets/6409b841-4470-4a92-871b-42572ba3a225" />
+
+<img width="893" height="359" alt="изображение" src="https://github.com/user-attachments/assets/4e8a281e-4bc8-4db2-9961-f5f99be20355" />
+
+<img width="728" height="158" alt="изображение" src="https://github.com/user-attachments/assets/d5199d99-9c14-48d8-9604-025711b67f53" />
+
+<img width="869" height="367" alt="изображение" src="https://github.com/user-attachments/assets/59825639-2688-478a-a59b-45eac6338e1f" />
+
+<img width="1324" height="608" alt="изображение" src="https://github.com/user-attachments/assets/6236f9ed-de85-4ac0-836a-423213c42fca" />
+
